@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Ninja - BETA -",
+  "description": "Comme je me fais chier, je fais une extension chrome. Merci de repporter tout bug sur la conversation Messager",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "ninja-simple-512.png",
+    "default_popup": "popup.xhtml"
+  },
+  "background": {
+    "persistent": true,
+    "scripts":["page.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["page.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}
